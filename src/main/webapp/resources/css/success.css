@@ -1,0 +1,161 @@
+/*body{
+  background-color: #1c4971;
+}*/
+/*成功答题*/
+.tipsBox{
+  margin-top: 70px;
+}
+.tipsBox > p{
+  text-align: center;
+  font-size: 14px;
+  color: #fff;
+  line-height: 25px;
+}
+.phoneNum{
+  text-align: center;
+  margin-top: 35px;
+}
+.phoneNum > input{
+  width: 80%;
+  height: 30px;
+  line-height: 30px;
+  text-align: center;
+  border: none;
+  background-color: #fff;
+  color: #dc2c2c;
+}
+.phoneNum > input::placeholder{
+  color:#dc2c2c;
+  font-size: 12px;
+}
+.phoneNum .telTips{
+  margin: 8px 0;
+  color: #ff0;
+}
+.subBtn{
+  text-align: center;
+  margin-top: 70px;
+}
+.subBtn a{
+  display: inline-block;
+  width: 200px;
+  height: 40px;
+  line-height: 38px;
+  background: #ff9600;
+  background-size: cover;
+  border-radius: 3px;
+  font-size: 16px;
+  color: #ffffff;
+}
+.lnvitation{
+  text-align: center;
+  margin-top: 100px;
+}
+.lnvitation > a{
+  display: inline-block;
+  width: 200px;
+  height: 40px;
+  line-height: 38px;
+  border-radius: 4px;
+  font-size: 16px;
+  color: #ffffff;
+}
+.pts{
+  font-size: 16px;
+  color: #ffffff;
+  text-align: center;
+  margin-top: 30px;
+}
+/*提示框*/
+.mask{
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, .5);
+}
+.tipsbor{
+  /*740 470*/
+  width: 255px;
+  height: 160px;
+  box-sizing: border-box;
+  background-color: rgba(153, 184, 214, .89);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-top: -80px;
+  margin-left: -127px;
+  padding-top: 25px;
+  text-align: center;
+}
+.tipsbor > p{
+  font-size: 16px;
+  color: #0b3359;
+  line-height: 30px;
+}
+.tipsbor > a{
+  display: inline-block;
+  width: 200px;
+  height: 40px;
+  line-height: 38px;
+  color: #0b3359;
+  border: 1px solid #0b3359;
+  border-radius: 4px;
+  font-size: 16px;
+  margin-top: 15px;
+}
+/*失败答题*/
+.tipfail{
+  color: #fff;
+  margin-top: 130px;
+}
+.lnvitationfail{
+  margin-top: 80px;
+}
+.lnvitationfail a:nth-child(2){
+  margin-top: 30px;
+}
+.tryAgain{
+  margin: 20px 0;
+}
+.numColor{
+ color: #fffc00 !important;
+}
+.tryagBtn{
+  background: #ff9600;
+}
+.inviBtn{
+  background: #84ccc9;
+}
+.posFoot{
+  width: 100%;
+  position: fixed;
+  left: 0;
+  bottom: 20px;
+  z-index: -1;
+}
+.posFoot p{
+  color: #fff;
+  margin-top: 8px;
+  text-align: center;
+}
+.posFoot :last-child{
+  font-size: 12px;
+}
+.maskbody1{
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0,0,0,.5);
+  z-index: 1000;
+}
+.shareImg{
+	display:block;
+	width:100px;
+	position:absolute;
+	right:6px;
+	top:4px;
+}

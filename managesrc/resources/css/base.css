@@ -1,0 +1,87 @@
+html, body,a,address,b,big,blockquote,body,center,cite,code,dd,del,div,dl,dt,em,fieldset,font,form,h1,h2,h3,h4,h5,h6,html,i,iframe,img,ins,label,legend,li,ol,p,pre,small,span,strong,u,ul,var
+{ margin: 0; padding: 0; }
+input:focus,select:focus,button{ outline: 0; }
+textarea{ padding: 0 10px; outline:none; resize: none; }
+.hide{ display: none; }
+.fl{ float: left; }
+.fr{ float: right; }
+em,b,strong,i,label{ font-style: normal; font-weight:100; }
+ul, li, ol { list-style: none;cursor: pointer; }
+a, a:link { text-decoration: none; }
+a:focus { outline: none; }
+.hiden{
+  visibility: hidden;
+}
+html,body{-ms-overflow-style: scrollbar;}
+body{
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-tap-highlight-color:rgba(0,0,0,0);
+}
+body{ font-family: 'SimHei'; font-size: 14px; background: #e54135 url(../images/bg.png) no-repeat 10px 90px ; background-size: 100%;}
+* { word-break: break-all; }
+/*超出出现省略号*/
+.ell{ white-space:nowrap; overflow:hidden; text-overflow:ellipsis; }
+/*通用清除浮动*/
+.clearfix:before,.clearfix:after{ content:""; display:table; }
+.clearfix:after{ clear:both; }
+.clearfix{ *zoom:1; /*IE/7/6*/; }
+.text-center{text-align: center;}
+/*通用清除浮动*/
+.answerBtn{
+  border: none;
+  width: 56%;
+  height: 36px;
+  margin: 20px auto;
+  display: block;
+  border-radius: 4px;
+  font-size: 16px;
+  color: #fff;
+  background: #ff9600;
+  line-height: 36px;
+  text-align: center;
+}
+/*弹出提示*/
+.maskbody{
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0,0,0,.5);
+  z-index: 1000;
+}
+.prompt{
+  width: 240px;
+  min-height: 150px;
+  background: url(../images/tipsbg.png) no-repeat;
+  background-size: 100%;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  margin-top: -85px;
+  margin-left: -120px;
+  border-radius: 3px;
+  text-align: center;
+}
+.prompt p{
+  color: #0b3359;
+  font-size: 14px;
+  margin: 40px 10px 20px;
+}
+.prompt .probtn{
+  border-top: 1px solid #c4c4c4;
+  margin-top: 10px;
+  border: 1px solid #0b3359;
+  background: transparent;
+  height: 30px;
+  width: 80%;
+  font-size: 14px;
+  color: #0b3359;
+  position: absolute;
+  bottom: 14px;
+  left: 50%;
+  margin-left: -40%;
+  border-radius: 3px;
+}
+/*弹窗结束*/

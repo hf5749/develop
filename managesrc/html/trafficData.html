@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>活动数据分析</title>
+    <link rel="stylesheet" type="text/css" href="../resources/css/base.css">
+    <link rel="stylesheet" type="text/css" href="../resources/css/analyData.css">
+  </head>
+  <body class="laydate_body">
+    <div class="analyContainer">
+      <div class="dataTab clearfix">
+          <a href="analyData.html">数据流量分析</a>
+          <a href="trafficData.html" class="active">活动设置</a>
+      </div>
+      <div class="activeBox">
+          <div class="actTime"><span>活动时间</span><u class="js-timeset"></u><a href="javascript:;" class="bcss js-bcss" style="display:none">保存</a></div>
+          <div class="timeSetting"><span class="laydate-icon" id="start">2017年6月9日</span>至<span class="laydate-icon js-end" id="end">2017年6月10日</span></div>
+          <div class="actTime"><span>活动规则</span><u class="js-hdgz"></u></div>
+          <div class="acticontent js-acticontent">1.活动时间：6月1日-7月9日，每日9:00-21:00
+            2.本次活动针对中国移动、中国电信和中国联通手机用户。
+            3.此次活动每个手机号码只能获奖一次。每日流量奖励配额有限，先到先得。
+            4.参与答题活动全部答对10道题目者将获赠国内手机流量。
+            5.参与活动获奖用户将在7月份获赠流量。
+            6.流量由中国移动、中国电信和中国联通为您提供。
+            7.如有疑问请联系各运营商客服。
+          </div>
+          <div class="ktiao"></div>
+          <div class="actTime"><span>每日流量奖励数量控制</span></div>
+          <p>已发放流量奖品数量：<span>23957887766</span> </p>
+          <div class="tableBox">
+              <ul class="ulTh clearfix"><li>日期</li><li>当日奖品数量</li><li>奖品剩余数量</li></ul>
+              <ul class="ultd clearfix"><li class="jsrq">6月1日</li><li><span>10000</span><u class="js-xiu"></u></li><li class="jqsy">396</li></ul>
+              <ul class="ultd clearfix"><li class="jsrq">6月2日</li><li><span>8000</span><u class="js-xiu"></u></li><li class="jqsy">3961</li></ul>
+              <ul class="ultd clearfix"><li class="jsrq">6月3日</li><li><span>5000</span><u class="js-xiu"></u></li><li class="jqsy">-</li></ul>
+          </div>
+          <div class="footbotm">当前用户：<span>13585210014</span><a href="#">退出登录</a></div>
+      </div>
+      <div class="mask">
+        <div class="tipsbor" style="display:none">
+          <p>设置奖励数量</p>
+          <p class="p2">当前日期：<span>x月x日</span></p>
+          <input type="text">
+          <a href="##" class="js-qd">确定</a>
+        </div>
+        <div class="modifyRule" style="display:none">
+          <p>编辑活动规则</p>
+          <textarea></textarea>
+          <a href="##" class="js-gzqd">确定</a>
+        </div>
+      </div>
+    </div>
+    <script src="../resources/lib/jquery.min.js" charset="utf-8"></script>
+    <script src="../resources/lib/laydate.js"></script>
+    <script>
+      var start = {
+        elem: '#start',
+        format: 'YYYY年MM月DD日',
+        isclear: false, //是否显示清空
+        istoday: false, //是否显示今天
+        choose: function(datas){
+           end.min = datas; //开始日选好后，重置结束日的最小日期
+           end.start = datas //将结束日的初始值设定为开始日
+        }
+      };
+      var end = {
+        elem: '#end',
+        format: 'YYYY年MM月DD日',
+        isclear: false, //是否显示清空
+        istoday: false, //是否显示今天
+        fixed: true,
+        choose: function(datas){
+          start.max = datas; //结束日选好后，重置开始日的最大日期
+        }
+      };
+      laydate(start);
+      laydate(end);
+      // 打开时间保存
+      $(document).on('click','.js-timeset',function(){
+        $('.js-bcss').show();
+      });
+      // 点击保存
+      $(document).on('click','.js-bcss',function(){
+        $('.js-bcss').hide();
+      });
+      // 打开奖品设置弹窗
+      $(document).on('click','.js-xiu',function(){
+        // 日期
+        var day = $(this).parents('li').siblings('li.jsrq').text();
+        // 当日奖品数量
+        var maxnum = $(this).siblings('span').text();
+        // 奖品剩余数量
+        var minnum = $(this).parents('li').siblings('li.jqsy').text();
+        // 修改当前弹窗日期
+        $('.tipsbor p.p2 span').html(day);
+        // 修改当日奖品数量
+        $('.tipsbor input').val(maxnum)
+        $('.mask').show();
+        $('.tipsbor').show();
+      });
+        // 关闭奖品设置弹窗
+      $(document).on('click','.js-qd',function(){
+        $('.mask').hide();
+        $('.tipsbor').hide();
+      });
+      // 打开规则设置
+      $(document).on('click','.js-hdgz',function(){
+        var hdgz = $('.acticontent').html();
+        $('.modifyRule textarea').val(hdgz);
+        $('.mask').show();
+        $('.modifyRule').show();
+      });
+      // 关闭规则设置
+      $(document).on('click','.js-gzqd',function(){
+        var hdgz =  $('.modifyRule textarea').val();
+        $('.acticontent').html(hdgz);
+        bianse();
+        $('.modifyRule').hide();
+        $('.mask').hide();
+      });
+      function bianse(){
+        var acticontent = $('.js-acticontent').html();
+        if (acticontent.split('2.').length != 1) {
+          var jie = acticontent.split('2.');
+          var pin = '';
+          $.each(jie,function(i){
+             if (i==0) {
+                jie = jie[i].replace(jie[i],"<p style='color:#fffc00;'>"+ jie[i] +"</p>");
+             }else{
+                pin =  acticontent.split('2.')[i];
+             }
+          })
+          var html = jie += "2." + pin;
+          $('.js-acticontent').html(html);
+        }
+      }
+      bianse();
+    </script>
+  </body>
+</html>
