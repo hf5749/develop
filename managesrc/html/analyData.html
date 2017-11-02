@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>活动数据分析</title>
+    <link rel="stylesheet" type="text/css" href="../resources/css/base.css">
+    <link rel="stylesheet" type="text/css" href="../resources/css/analyData.css">
+  </head>
+  <body>
+    <div class="analyContainer">
+      <div class="dataTab clearfix">
+        <a href="analyData.html" class="active">活动数据分析</a>
+        <a href="trafficData.html">活动设置</a>
+      </div>
+      <p class="p20 endTime">数据截止 2017年6月10日</p>
+      <div class="tableMain">
+        <ul class="tableUl tableUl1 clearfix">
+          <li>活动访问量</li>
+          <li>完成答题人数</li>
+          <li>获奖人数</li>
+        </ul>
+        <ul class="tableUl clearfix">
+          <li>100000</li>
+          <li>9000</li>
+          <li>4500</li>
+        </ul>
+      </div>
+      <div class="bottomBgcolor clearfix">
+        <div class="contrast clearfix">
+          <p class="contrastLeft fl">各省数据对比</p>
+          <div class="contrastRight fr">
+            <dl class="contrastlist clearfix">
+              <dt class="winNum"></dt>
+              <dd class="fl">获奖人数</dd>
+            </dl>
+            <dl class="contrastlist clearfix">
+              <dt class="actNum"></dt>
+              <dd class="fl">完成答题人数</dd>
+            </dl>
+          </div>
+        </div>
+        <div class="percentage1 percentage clearfix">
+          <ul class="perLeft fl">
+            <li>北京</li>
+            <li>河北</li>
+            <li>天津</li>
+            <li>上海</li>
+            <li>河北</li>
+            <li>北京</li>
+            <li>河北</li>
+            <li>天津</li>
+            <li>上海</li>
+            <li>河北</li>
+            <li>北京</li>
+            <li>河北</li>
+            <li>天津</li>
+            <li>上海</li>
+            <li>河北</li>
+          </ul>
+          <ul class="perRight fr">
+            <li style="width:100%">
+              <span style="width:60%;">600</span>
+              1000
+            </li>
+            <li style="width:80%">
+              <span style="width:10%;">100</span>
+              800
+            </li>
+            <li style="width:40%">
+              <span style="width:50%;">200</span>
+              400
+            </li>
+            <li style="width:50%">
+              <span style="width:60%;">300</span>
+              600
+            </li>
+            <li style="width:90%">
+              <span style="width:30%;">300</span>
+              900
+            </li>
+            <li style="width:100%">
+              <span style="width:60%;">600</span>
+              1000
+            </li>
+            <li style="width:80%">
+              <span style="width:10%;">100</span>
+              800
+            </li>
+            <li style="width:40%">
+              <span style="width:50%;">200</span>
+              400
+            </li>
+            <li style="width:50%">
+              <span style="width:60%;">300</span>
+              600
+            </li>
+            <li style="width:90%">
+              <span style="width:30%;">300</span>
+              900
+            </li>
+            <li style="width:100%">
+              <span style="width:60%;">600</span>
+              1000
+            </li>
+            <li style="width:80%">
+              <span style="width:10%;">100</span>
+              800
+            </li>
+            <li style="width:40%">
+              <span style="width:50%;">200</span>
+              400
+            </li>
+            <li style="width:50%">
+              <span style="width:60%;">300</span>
+              600
+            </li>
+            <li style="width:90%">
+              <span style="width:30%;">300</span>
+              900
+            </li>
+          </ul>
+        </div>
+        <a href="##" class="openAll js-openAll fr">显示全部省份</a>
+      </div>
+    </div>
+    <script src="../resources/lib/jquery.min.js" charset="utf-8"></script>
+    <script>
+      $(function(){
+        $(document).on('click','.js-openAll',function(){
+          if($('.percentage1').hasClass('percentage')){
+            $('.percentage1').removeClass('percentage')
+            $(this).text("收起全部省份")
+          }else{
+            $('.percentage1').addClass('percentage')
+            $(this).text("显示全部省份")
+          }
+        })
+      })
+    </script>
+  </body>
+</html>

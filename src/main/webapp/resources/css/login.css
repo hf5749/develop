@@ -1,0 +1,51 @@
+.Tlogo{
+  display: block;
+  width: 80%;
+  margin: 63px auto 0;
+}
+.userpwd {
+  text-align: center;
+  margin-top: 60px;
+}
+.userpwd input{
+  width: 230px;
+  height: 35px;
+  line-height: 35px;
+  font-size: 16px;
+  border: 1px solid #0976b9;
+  color: #94b4d8;
+  padding-left: 30px;
+}
+.userpwd input:nth-child(1){
+  background:#113a72 url('../images/user.png')no-repeat 10px center;
+  background-size: 7%;
+}
+.userpwd input:nth-child(2){
+  background:#113a72 url('../images/lock.png')no-repeat 10px center;
+  background-size: 6%;
+  margin-top: 25px;
+}
+.userpwd input::placeholder{
+  font-size: 16px;
+  color: #94b4d8;
+}
+.subBtn{
+  text-align: center;
+  margin-top: 70px;
+}
+.subBtn a{
+  display: inline-block;
+  width: 240px;
+  height: 40px;
+  line-height: 38px;
+  background: url('../images/btnsub.png')no-repeat;
+  background-size: cover;
+  border-radius: 3px;
+  font-size: 16px;
+  color: #ffffff;
+}
+.loginTips{
+	margin-top:20px;
+	color:#ff0;
+	text-align:center;
+}

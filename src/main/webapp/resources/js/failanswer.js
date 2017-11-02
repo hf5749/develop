@@ -1,0 +1,11 @@
+$(function(){
+	$(document).on('click','.js-inviBtn',function(){
+		$('.maskbody1').show();
+	})
+	$('.maskbody1').on('click',function(){
+		$('.maskbody1').hide();
+  })
+	$('.js-proBtn').on('click',function(){
+	   $(this).parents('.maskbody').hide();
+	});
+})

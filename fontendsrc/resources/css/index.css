@@ -1,0 +1,64 @@
+.Tlogo{
+  display: block;
+  width: 100%;
+  margin: 50px auto 0;
+}
+.Btitle{
+  color: #ffda0a;
+  font-size: 26px;
+  text-align: center;
+  margin: 10px 0 20px;
+}
+.Twords{
+  width: 80%;
+  margin: 0 auto 6px;
+  text-align: center;
+  color: #fff;
+  font-size: 14px;
+}
+.rulesMain{
+  width: 90%;
+  color: #fff;
+  margin: 30px auto 20px;
+}
+.rulesTitle{
+  padding: 6px;
+  padding-top: 0px;
+  font-size: 16px;
+  background: url(../images/index/line.png) no-repeat left bottom;
+  background-size: 100%;
+}
+.rules{
+  font-size: 14px;
+  line-height: 22px;
+  padding: 0 6px;
+}
+.sColor{
+  color: #fffc00;
+}
+.participant{
+  width: 90%;
+  margin: 0 auto;
+
+}
+.participant li{
+  float: left;
+  width: 30%;
+  height: 38px;
+  position: relative;
+  margin: 0 4px;
+}
+.participant li img{
+  width: 80%;
+  display: block;
+  margin: 0 auto;
+  position: absolute;
+  bottom:0;
+  left: 50%;
+  margin-left: -40%;
+}
+.foot{
+  color: #fff;
+  text-align: center;
+  margin: 14px auto;
+}

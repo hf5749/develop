@@ -1,0 +1,335 @@
+/*数据流量分析--start*/
+.activeBox{
+  color: #ffffff;
+  font-family: 'SimHei';
+}
+.actTime {
+  padding: 0px 20px;
+  line-height: 30px;
+  margin-top: 5px;
+  background: url(../images/borderbottom.png) no-repeat 20px bottom;
+  background-size: 90%;
+}
+.actTime span{
+  color: #ffffff;
+  font-size: 14px;
+  margin-right: 15px;
+}
+.timeSetting .laydate-icon{
+  background: none;
+  padding-right: 0;
+  border: none;
+}
+.laydate_box{
+  left:45px !important;
+  top: 120px !important;
+}
+.activeBox u{
+  display: inline-block;
+  width: 12px;
+  height: 12px;
+  background: url(../images/pencil.png) no-repeat;
+  background-size: cover;
+}
+.timeSetting{
+  text-align: center;
+  font-size: 14px;
+  line-height: 35px;
+}
+.timeSetting span{
+  margin: 0px 10px;
+}
+.acticontent{
+  padding: 10px 20px 15px 25px;
+  line-height: 20px;
+  white-space: pre-line;
+}
+.ktiao{
+  height: 15px;
+  width: 100%;
+  background-color: #ffffff;
+  opacity: 0.3;
+}
+.activeBox >p{
+  padding: 0px 20px;
+  line-height: 30px;
+}
+.tableBox{
+  padding: 0px 20px;
+  margin-top: 10px;
+}
+.ulTh {
+  border: 1px solid #c4c4c4;
+  border-bottom: none;
+  border-right: none;
+  text-align: center;
+}
+.ulTh li{
+  background-color: #e1e6e8;
+  float: left;
+  width: 32.9%;
+  text-align: center;
+  color: #5e5e5e;
+  line-height: 30px;
+  border: 1px solid #c4c4c4;
+  border-top: none;
+  border-left: none;
+}
+.ultd {
+  border: 1px solid #c4c4c4;
+  border-bottom: none;
+  border-right: none;
+  text-align: center;
+}
+.ultd li{
+  background-color: rgba(255,255,255,0.9);
+  float: left;
+  width: 32.9%;
+  text-align: center;
+  line-height: 30px;
+  color: #868686;
+  border: 1px solid #c4c4c4;
+  border-top: none;
+  border-left: none;
+}
+.ultd li u{
+  background: url(../images/pencil1.png) no-repeat;
+  background-size: cover;
+}
+.ultd li span{
+  margin-right: 6px;
+}
+.footbotm{
+  line-height: 30px;
+  padding: 0px 20px;
+  margin-top: 30px;
+  margin-bottom: 20px;
+}
+.footbotm > a{
+  color: #ffffff;
+  float: right;
+}
+.bcss{
+  color: #ffffff;
+  margin-left: 30px;
+}
+/*提示框*/
+.mask{
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, .5);
+  display: none;
+}
+.tipsbor{
+  /*740 470*/
+  width: 255px;
+  height: 165px;
+  box-sizing: border-box;
+  background: url(../images/backtips.png) no-repeat center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-top: -80px;
+  margin-left: -127px;
+  padding-top: 10px;
+  text-align: center;
+  border-radius: 4px;
+}
+.tipsbor p{
+  text-align: left;
+  padding-left: 25px;
+  line-height: 25px;
+}
+.tipsbor p.p2{
+  text-align: center;
+  padding-right: 20px;
+}
+.tipsbor > input{
+  width: 200px;
+  color: #dc2c2c;
+  line-height: 30px;
+  border: none;
+  text-align: center;
+  background-color: #ffffff;
+}
+.tipsbor > a{
+  display: inline-block;
+  width: 200px;
+  height: 40px;
+  line-height: 38px;
+  color: #ffffff;
+  border: none;
+  border-radius: 4px;
+  font-size: 16px;
+  margin-top: 15px;
+  background: url(../images/xuanze.png) no-repeat center;
+}
+.modifyRule{
+  width: 255px;
+  min-height: 320px;
+  box-sizing: border-box;
+  background: url(../images/backtips.png) no-repeat center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-top: -160px;
+  margin-left: -127px;
+  padding-top: 10px;
+  padding-bottom: 20px;
+  text-align: center;
+  border-radius: 4px;
+}
+.modifyRule  p{
+  text-align: left;
+  color: #ffffff;
+  padding-left: 25px;
+  line-height: 25px;
+}
+.modifyRule textarea{
+  width: 200px;
+  height: 230px;
+  background-color: #ffffff;
+  border: none;
+  color: #5b5b5b;
+  line-height: 20px;
+}
+.modifyRule > a{
+  display: inline-block;
+  width: 200px;
+  height: 40px;
+  line-height: 38px;
+  color: #ffffff;
+  border: none;
+  border-radius: 4px;
+  font-size: 16px;
+  margin-top: 15px;
+  background: url(../images/xuanze.png) no-repeat center;
+}
+/*数据流量分析--end*/
+/*活动设置--start*/
+.analyContainer{
+  color: #fff;
+}
+.dataTab {
+  border-bottom: 1px solid #dfe1e2;
+}
+.dataTab a{
+  float: left;
+  width: 50%;
+  text-align: center;
+  height: 50px;
+  line-height: 50px;
+  color: #fff;
+}
+.dataTab .active{
+  background-color: #e96f6d;
+}
+.endTime{
+  padding: 20px;
+}
+.tableMain{
+  margin-bottom: 20px;
+}
+.tableUl{
+  width: 280px;
+  margin: 0 auto;
+  border-left: 1px solid #ccc;
+  color: #868686;
+}
+.tableUl li{
+  float: left;
+  width: 92px;
+  height: 30px;
+  line-height: 30px;
+  text-align: center;
+  border: 1px solid #ccc;
+  background-color: #fff;
+  border-left: none;
+}
+.tableUl1 li{
+  background-color: #f5f7f8;
+  border-bottom: none;
+  color: #5e5e5e;
+}
+.contrast{
+  width: 80%;
+  margin: 10px auto 20px;
+  padding-top: 10px;
+}
+.contrastLeft{
+
+}
+.contrastlist dt{
+  float: left;
+  width: 38px;
+  height: 28px;
+  margin-right: 10px;
+}
+.contrastlist dd{
+  line-height: 38px;
+}
+.actNum{
+  background-color: #9d1717;
+}
+.winNum{
+  background-color: #dc2c2c;
+}
+.percentage{
+  width: 80%;
+  margin: 0 auto;
+  height: 384px;
+  overflow: hidden;
+}
+.percentage1{
+  width: 80%;
+  margin: 0 auto;
+}
+.perLeft{
+  border-right: 1px solid #00558e;
+  padding-right: 10px;
+}
+.perLeft li{
+  height: 20px;
+  line-height: 20px;
+  margin-bottom: 20px;
+}
+.perRight{
+  width: 80%;
+  text-align: right;
+  color: #333;
+}
+.perRight li{
+  width: 100%;
+  height: 20px;
+  background-color: #9d1717;
+  margin-bottom: 20px;
+  position: relative;
+  left: 0;
+  top: 0;
+  padding-right: 4px;
+  font-size: 12px;
+  color: #fff;
+  line-height: 20px;
+}
+.perRight li span{
+  height: 100%;
+  background-color: #dc2c2c;
+  display: block;
+  position: absolute;
+  left: 0;
+  top: 0;
+  padding-right: 2px;
+}
+.openAll{
+  display: block;
+  color: #dc2c2c;
+  margin: 20px;
+}
+.bottomBgcolor{
+  background-color: #fff;
+  color: #dc2c2c;
+}
+/*活动设置--end*/

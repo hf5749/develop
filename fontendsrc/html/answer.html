@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>答题页</title>
+    <link rel="stylesheet" href="../resources/css/base.css">
+    <link rel="stylesheet" href="../resources/css/answer.css">
+  </head>
+  <body>
+    <div class="ansMain">
+      <h6>共10题</h6>
+      <div>
+        <div class="question" data-id="1">
+          <p>1、2017年，国内生产总值达到74.4万亿元，增长6.7%，名列世界前茅，对全球经济增长的贡献率超过_____。</p>
+          <ul class="answers">
+            <li class="answersList active"><span>A.</span>30%</li>
+            <li class="answersList"><span>B.</span>25%</li>
+            <li class="answersList"><span>C.</span>28%</li>
+          </ul>
+        </div>
+        <div class="question" data-id="2">
+          <p>2、在提前完成本届政府减少行政审批事项三分之一目标的基础上，2016年又取消_____国务院部门及其指定地方实施的审批事项，清理规范192项审批中介服务事项、220项职业资格许可认定事项。</p>
+          <ul class="answers">
+            <li class="answersList active"><span>A.</span>165项</li>
+            <li class="answersList"><span>B.</span>175项</li>
+            <li class="answersList"><span>C.</span>185项</li>
+          </ul>
+        </div>
+        <div class="question" data-id="3">
+          <p>3、2017年，国内生产总值达到74.4万亿元，增长6.7%，名列世界前茅，对全球经济增长的贡献率超过_____。</p>
+          <ul class="answers">
+            <li class="answersList active"><span>A.</span>30%</li>
+            <li class="answersList"><span>B.</span>25%</li>
+            <li class="answersList"><span>C.</span>28%</li>
+          </ul>
+        </div>
+        <div class="question" data-id="4">
+          <p>4、2017年，国内生产总值达到74.4万亿元，增长6.7%，名列世界前茅，对全球经济增长的贡献率超过_____。</p>
+          <ul class="answers">
+            <li class="answersList active"><span>A.</span>30%</li>
+            <li class="answersList"><span>B.</span>25%</li>
+            <li class="answersList"><span>C.</span>28%</li>
+          </ul>
+        </div>
+        <div class="question" data-id="5">
+          <p>5、2017年，国内生产总值达到74.4万亿元，增长6.7%，名列世界前茅，对全球经济增长的贡献率超过_____。</p>
+          <ul class="answers">
+            <li class="answersList active"><span>A.</span>30%</li>
+            <li class="answersList"><span>B.</span>25%</li>
+            <li class="answersList"><span>C.</span>28%</li>
+          </ul>
+        </div>
+        <div class="question" data-id="6">
+          <p>6、2017年，国内生产总值达到74.4万亿元，增长6.7%，名列世界前茅，对全球经济增长的贡献率超过_____。</p>
+          <ul class="answers">
+            <li class="answersList active"><span>A.</span>30%</li>
+            <li class="answersList"><span>B.</span>25%</li>
+            <li class="answersList"><span>C.</span>28%</li>
+          </ul>
+        </div>
+      </div>
+      <button type="button" name="button" class="answerBtn js-answerBtn">提交</button>
+      <!-- 弹出提示框 -->
+      <div class="maskbody maskbody1 hide">
+        <div class="prompt">
+          <p>您还有题目没有完成呢！<br/><br/>快去完成全部题目再来提交吧~</p>
+          <button class="probtn js-proBtn">确认</button>
+        </div>
+      </div>
+    <script src="../resources/lib/jquery.min.js" charset="utf-8"></script>
+    <script type="text/javascript">
+      "use strict";
+      $(function(){
+        $(document).on('click','.answersList',function(){
+          $(this).toggleClass('active');
+          $(this).siblings().removeClass('active');
+        });
+        $(document).on('click','.js-answerBtn',function(){
+          var proIds = "";
+          var ansChioses = "";
+          for (var i = 0; i < $('.question').length; i++) {
+            if(!$('.question').eq(i).find('li').hasClass('active')){
+              $('.maskbody1').show();
+            }else{
+              if (i == $(".question").length - 1) {
+                proIds = proIds+ $(".question").eq(i).data('id');
+                ansChioses = ansChioses+ $(".question").eq(i).find('.active span').text();
+              }else{
+                proIds = proIds+ $(".question").eq(i).data('id')+",";
+                ansChioses = ansChioses+ $(".question").eq(i).find('.active span').text()+",";
+              }
+
+            }
+          }
+          // var params = {
+      		//     proIds:proIds,
+      		//     ansChioses:ansChioses,
+          // };
+          // var post = $.post(jsCtx + '/', params);
+          // post.done(function(data){
+          //     if (data && data.code === 0) {
+          //
+          //     }
+          // });
+        })
+        $(document).on('click','.js-proBtn',function(){
+          $(this).parents('.maskbody').hide();
+        });
+      })
+    </script>
+  </body>
+</html>
